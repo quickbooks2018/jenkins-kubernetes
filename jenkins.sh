@@ -24,6 +24,13 @@ echo "Jenkins launched"
 ###########################
 # Docker Socket Permissions
 ###########################
+cat <<JENkINS > jenkins-permissions.sh
+#!/bin/bash
+# Purpose: Set Docker Socket Permissions after reboot & Docker Logging
+
+###########################
+# Docker Socket Permissions
+###########################
 cat <<EOF > ${HOME}/docker-socket.sh
 #!/bin/bash
 chmod 666 /var/run/docker.sock
